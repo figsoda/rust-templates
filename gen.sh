@@ -13,9 +13,10 @@ echo "github: $5"
 cp -r "$1" "$2"
 cd "$2"
 
-sd -s "<<name>>" "$3" ./**
-sd -s "<<authors>>" "$4" ./**
-sd -s "<<github>>" "$5" ./**
+files=$(find)
+sd -s "<<name>>" "$3" $files
+sd -s "<<authors>>" "$4" $files
+sd -s "<<github>>" "$5" $files
 
 git init
 git remote add origin "https://github.com/$5.git"

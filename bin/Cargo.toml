@@ -1,0 +1,22 @@
+cargo-features = ["strip"]
+
+[package]
+name = "<<name>>"
+version = "0.1.0"
+authors = <<authors>>
+edition = "2018"
+description = ""
+readme = "README.md"
+homepage = "https://github.com/<<github>>"
+repository = "https://github.com/<<github>>"
+license = "MPL-2.0"
+keywords = []
+categories = []
+
+[dependencies]
+
+[profile.release]
+lto = true
+panic = "abort"
+codegen-units = 1
+strip = "symbols"

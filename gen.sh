@@ -22,4 +22,3 @@ git remote add origin "https://github.com/$5.git"
 git add .
 git commit -m "initial commit"
 git branch -m main
-git branch --set-upstream-to=origin/main main

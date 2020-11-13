@@ -2,7 +2,7 @@
 
 set -e
 
-[ $# -ne 5 ] && exit 1
+[ $# -eq 5 ]
 
 echo "Generating from $1"
 echo "directory: $2"

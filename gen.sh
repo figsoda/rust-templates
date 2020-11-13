@@ -3,6 +3,7 @@
 set -e
 
 [ $# -eq 5 ]
+[ ! -e $2 ]
 
 echo "Generating from $1"
 echo "directory: $2"

@@ -12,12 +12,14 @@ My rust templates
 
 ## Usage
 
-```
+```sh
 sh gen.sh <template> <directory> <name> <authors> <github>
 ```
 
+Currently `bin` and `lib` are the only available templates
+
 ### Example
 
-```shell
+```sh
 sh gen.sh bin ~/mmtc mmtc '["figsoda <figsoda@pm.me>"]' figsoda/mmtc
 ```

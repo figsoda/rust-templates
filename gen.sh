@@ -18,6 +18,7 @@ files=$(find)
 sd -s "<<name>>" "$3" $files
 sd -s "<<authors>>" "$4" $files
 sd -s "<<github>>" "$5" $files
+cargo generate-lockfile
 
 git init
 git remote add origin "https://github.com/$5"

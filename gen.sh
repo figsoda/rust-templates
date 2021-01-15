@@ -24,4 +24,3 @@ git init
 git remote add origin "https://github.com/$5"
 git add .
 git commit -m "initial commit"
-git branch -m main

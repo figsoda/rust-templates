@@ -32,7 +32,7 @@ cargo +nightly build --release
 
 
 ## Changelog
-See [CHANGELOG.md](https://github.com/<<github>>/blob/main/CHANGELOG.md)
+See [CHANGELOG.md](CHANGELOG.md)
 
 
 [Crate]: https://crates.io/crates/<<name>>

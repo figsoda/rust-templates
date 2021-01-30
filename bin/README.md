@@ -12,19 +12,16 @@
 The latest precompiled binaries are available on [github](https://github.com/<<github>>/releases/latest).
 
 Alternatively you can install <<name>> from [crates.io][Crate] with cargo.
-This requires the nightly toolchain of [Rust].
 
 ```sh
-cargo +nightly install <<name>>
+cargo install <<name>>
 ```
 
 
 ## Building from source
 
-This requires the nightly toolchain of [Rust].
-
 ```sh
-cargo +nightly build --release
+cargo build --release
 ```
 
 
@@ -36,4 +33,3 @@ See [CHANGELOG.md](CHANGELOG.md)
 
 
 [Crate]: https://crates.io/crates/<<name>>
-[Rust]: https://www.rust-lang.org/tools/install

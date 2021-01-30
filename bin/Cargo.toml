@@ -1,5 +1,3 @@
-cargo-features = ["strip"]
-
 [package]
 name = "<<name>>"
 version = "0.1.0"
@@ -19,4 +17,3 @@ categories = []
 lto = true
 panic = "abort"
 codegen-units = 1
-strip = "symbols"

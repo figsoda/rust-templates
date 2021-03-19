@@ -15,6 +15,10 @@ The latest precompiled binaries are available on [github](https://github.com/<<g
 
 Alternatively you can install <<name>> from [crates.io][crate] with cargo.
 
+```sh
+cargo install <<name>>
+```
+
 
 ## Building from source
 

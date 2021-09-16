@@ -16,7 +16,7 @@ My rust templates
 sh gen.sh <template> <directory> <name> <authors> <github>
 ```
 
-Currently `bin` and `lib` are the only available templates
+Currently `bin`, `binlib`, and `lib` are the only available templates
 
 ### Example
 

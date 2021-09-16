@@ -12,7 +12,12 @@ echo "name: $3"
 echo "authors: $4"
 echo "github: $5"
 
-cp -r "$1" "$2"
+mkdir -p "$2"
+pushd "$1"
+for file in **; do
+    [ -f "$file" ] && install -m 644 -D "$file" -T "$2/$file"
+done
+popd
 cd "$2"
 
 sd -s "<<name>>" "$3" -- **

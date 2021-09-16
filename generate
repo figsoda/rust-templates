@@ -12,17 +12,17 @@ echo "name: $3"
 echo "authors: $4"
 echo "github: $5"
 
-mkdir -p "$2"
-pushd "$1"
-for file in **; do
-    [ -f "$file" ] && install -m 644 -D "$file" -T "$2/$file"
+out=$(realpath "$2")
+cd "$1"
+files=(**)
+for file in "${files[@]}"; do
+    [ -f "$file" ] && install -m 644 -D "$file" -T "$out/$file"
 done
-popd
-cd "$2"
+cd "$out"
 
-sd -s "<<name>>" "$3" -- **
-sd -s "<<authors>>" "$4" -- **
-sd -s "<<github>>" "$5" -- **
+sd -s "<<name>>" "$3" -- "${files[@]}"
+sd -s "<<authors>>" "$4" -- "${files[@]}"
+sd -s "<<github>>" "$5" -- "${files[@]}"
 cargo generate-lockfile
 
 git init

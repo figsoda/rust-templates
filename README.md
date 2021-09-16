@@ -21,5 +21,5 @@ Currently `bin`, `binlib`, and `lib` are the only available templates
 ### Example
 
 ```sh
-sh gen.sh bin ~/mmtc mmtc '["figsoda <figsoda@pm.me>"]' figsoda/mmtc
+./generate bin ~/mmtc mmtc '["figsoda <figsoda@pm.me>"]' figsoda/mmtc
 ```

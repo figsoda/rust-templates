@@ -39,23 +39,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          target: ${{ matrix.target }}
-          default: true
-
       - name: Cargo build
-        uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release --target ${{ matrix.target }}
+        run: |
+          rustup toolchain install nightly --profile minimal -t ${{ matrix.target }}
+          cargo +nightly build --release --target ${{ matrix.target }}
         env:
           RUSTFLAGS: -Z strip=symbols
 
-      - name: Upload release asset
+      - name: Upload asset
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ github.token }}

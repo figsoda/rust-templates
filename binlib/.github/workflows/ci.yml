@@ -26,9 +26,9 @@ jobs:
 
       - name: Cargo build
         run: |
-          rustup toolchain install stable --profile minimal
-          cargo +stable build
-          cargo +stable test
+          rustup toolchain install stable --profile minimal -t ${{ matrix.target }}
+          cargo +stable build --target ${{ matrix.target }}
+          cargo +stable test --target ${{ matrix.target }}
 
   clippy-rustfmt:
     name: clippy-rustfmt

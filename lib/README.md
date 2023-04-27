@@ -7,9 +7,7 @@
 
 [Documentation](https://docs.rs/<<name>>)
 
-
 ## Usage
-
 
 ## Changelog
 

@@ -13,7 +13,7 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          body: "[Changelog](https://github.com/<<github>>/blob/main/CHANGELOG.md)"
+          body: "[CHANGELOG.md](https://github.com/<<github>>/blob/main/CHANGELOG.md)"
 
   release:
     name: release

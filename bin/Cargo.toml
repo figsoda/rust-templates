@@ -2,7 +2,7 @@
 name = "<<name>>"
 version = "0.1.0"
 authors = <<authors>>
-edition = "2021"
+edition = "2024"
 description = ""
 readme = "README.md"
 homepage = "https://github.com/<<github>>"

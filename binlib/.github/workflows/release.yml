@@ -21,9 +21,13 @@ jobs:
     name: release
     needs: create_release
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
     strategy:
       matrix:
         include:
+          - target: aarch64-apple-darwin
+            os: macos-latest
           - target: x86_64-apple-darwin
             os: macos-latest
           - target: x86_64-pc-windows-gnu
@@ -51,7 +55,6 @@ jobs:
       - name: Upload asset
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ github.token }}
           tag: ${{ github.ref }}
           file: target/${{ matrix.target }}/release/<<name>>${{ matrix.ext }}
           asset_name: <<name>>-${{ matrix.target }}${{ matrix.ext }}

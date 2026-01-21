@@ -9,9 +9,11 @@ jobs:
   create_release:
     name: create_release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           body: "[CHANGELOG.md](https://github.com/<<github>>/blob/main/CHANGELOG.md)"
 
@@ -37,7 +39,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Cargo build
         run: |
